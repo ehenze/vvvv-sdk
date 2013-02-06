@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="D:\AlphaLevels\AlphaLevels (EX9.Texture Filter).v4p">
-   <BOUNDS height="10260" left="5535" top="3570" type="Window" width="14490">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.dtd" >
+   <PATCH nodename="C:\vvvv-sdk\vvvv45\addonpack\lib\nodes\modules\TextureFX\Filter\AlphaLevels\AlphaLevels (EX9.Texture Filter).v4p">
+   <BOUNDS height="14145" left="2190" top="1395" type="Window" width="14715">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="AlphaLevels.fx" id="23" nodename="AlphaLevels.fx" systemname="AlphaLevels (EX9.Effect)">
    <BOUNDS height="270" left="2025" top="5790" type="Node" width="5055">
@@ -58,7 +58,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="21" nodename="RENDERER (EX9)" systemname="Renderer (EX9)">
+   <NODE componentmode="Hidden" id="21" nodename="RENDERER (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="0" left="2040" top="6705" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="1800" left="2040" top="6705" type="Box" width="2400">
@@ -78,6 +78,16 @@
    <PIN pinname="Enabled" visible="1">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <LINK dstnodeid="21" dstpinname="Layers" linkstyle="PolyLine" srcnodeid="23" srcpinname="Layer">
@@ -251,6 +261,10 @@
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Gamma">
    </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="2">
+   </PIN>
    </NODE>
    <LINK dstnodeid="23" dstpinname="Gamma" srcnodeid="30" srcpinname="Y Output Value">
    </LINK>
@@ -268,6 +282,10 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Input Black|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="23" dstpinname="fromBlack" srcnodeid="32" srcpinname="Y Output Value">
@@ -287,6 +305,10 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="23" dstpinname="fromWhite" srcnodeid="33" srcpinname="Y Output Value">
    </LINK>
@@ -305,6 +327,10 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="23" dstpinname="toBlack" srcnodeid="34" srcpinname="Y Output Value">
    </LINK>
@@ -322,6 +348,10 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Output White|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="23" dstpinname="toWhite" srcnodeid="35" srcpinname="Y Output Value">
